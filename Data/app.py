@@ -18,7 +18,7 @@ st.markdown(
 )
 
 # ---- LOAD DATA ----
-data = pd.read_csv('cost_of_living_merged.csv')
+data = pd.read_csv('Data/cost_of_living_merged.csv')
 
 
 # ---- PLAIN-ENGLISH EXPLAINER (for non-technical readers) ----
