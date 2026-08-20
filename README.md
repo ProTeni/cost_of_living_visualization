@@ -44,7 +44,7 @@ new data arrives, rather than rebuilding the entire dataset.
 ---
 
 ## Project structure
-
+```
 Final Attempt Topic/
 ├── build_dataset.py # the pipeline: reads ONS Excel, builds & joins the tables
 ├── Data/
@@ -56,6 +56,7 @@ Final Attempt Topic/
 ├── images/ # figures used in this README and the notebook
 ├── requirements.txt # dependencies
 └── README.md # this file
+```
 
 
 ---
