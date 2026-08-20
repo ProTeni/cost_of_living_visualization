@@ -2,6 +2,8 @@
 
 ![Inflation](images/inflation_image_puzzlebrick_like.jpg)
 
+**Live demo:** [https://costoflivingvisualization-ubkegabvjbgpmk5avkb5ws.streamlit.app/](https://costoflivingvisualization-ubkegabvjbgpmk5avkb5ws.streamlit.app/)
+
 
 A data visualisation product exploring which UK spending categories most affect
 household budgets — showing that the fastest-rising prices are not always the
