@@ -27,7 +27,7 @@ National Statistics.
 
 The dataset is built as a **star schema** — two tables joined on a shared key:
 
-![Star schema](images/fig4_star_schema.png)
+![Star schema](images\fig4_star_schema.png)
 
 - A **fact table** (`inflation_by_category`) holds the numbers that change every
   month: each category's rate of price increase.
