@@ -1,6 +1,7 @@
 # Cost of Living: What the Headline Hides
 
-![Inflation](images/inflation_image_tissue.jpg)
+![Inflation](images/inflation_image_puzzlebrick_like.jpg)
+
 
 A data visualisation product exploring which UK spending categories most affect
 household budgets — showing that the fastest-rising prices are not always the
@@ -43,6 +44,7 @@ new data arrives, rather than rebuilding the entire dataset.
 ---
 
 ## Project structure
+
 Final Attempt Topic/
 ├── build_dataset.py # the pipeline: reads ONS Excel, builds & joins the tables
 ├── Data/
