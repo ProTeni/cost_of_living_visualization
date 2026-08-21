@@ -96,7 +96,35 @@ with col2:
     st.pyplot(fig2)
 
 # ============================================================
-# SECTION 3: TREND — line chart across ALL months (no month selector needed)
+# SECTION 3: WHAT IT MEANS IN POUNDS — impact translated into £ per year
+# ============================================================
+st.markdown("## What it means in pounds")
+
+cP1, cP2 = st.columns([1, 1])
+with cP1:
+    month_pounds = st.selectbox('Month for this chart',
+                                ['2026-Mar', '2026-Apr', '2026-May'], key='pounds_month')
+with cP2:
+    household_spend = st.number_input('Typical household spend per year (£)',
+                                      min_value=5000, max_value=100000,
+                                      value=35200, step=100)
+
+st.caption("Each category's impact turned into real money for the household spend above. "
+           "Impact (percentage points) × yearly spend = the £ that category adds to the cost of living.")
+
+pounds_data = data[data['month'] == month_pounds].copy()
+pounds_data['pounds'] = household_spend * (pounds_data['weighted_contribution'] / 100)
+pounds_data = pounds_data[pounds_data['pounds'] > 0].sort_values('pounds')
+
+figP2, axP2 = plt.subplots(figsize=(8, 5))
+axP2.barh(pounds_data['division_name'], pounds_data['pounds'], color='#C44E52')
+axP2.set_xlabel('Extra cost per year (£)')
+for i, val in enumerate(pounds_data['pounds']):
+    axP2.text(val, i, f'  £{val:,.0f}', va='center', fontsize=8)
+st.pyplot(figP2)
+
+# ============================================================
+# SECTION 4: TREND — line chart across ALL months (no month selector needed)
 # ============================================================
 st.markdown("## Trend across months")
 st.caption("Hover over any point to see its value. Choose which categories to compare.")
